@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.element-top {
+    width: 80rem;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.element-bottom {
+    width: 80rem;
+    margin: 1rem auto;
+}
+
+.column {
+    width: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0rem 0.2rem;
+}
+
+.base-element {
+    width: 4rem;
+    height: 4rem;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.column-element {
+    margin-top: 0.2rem;
+}
+
+.line {
+    width: 100%;
+    height: 4rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.line-element {
+    margin: 0rem 0.2rem;
+}
+
+.base-color {
+    background: rgb(0, 43, 52);
+    color: rgb(119, 232, 255);
+    border: 4px solid rgb(119, 232, 255);
+}
+
+.color-1 {
+    background: rgb(52, 0, 9);
+    color: rgb(255, 119, 142);
+    border: 4px solid rgb(255, 119, 142);
+}
+
+.color-2 {
+    background: rgb(52, 16, 0);
+    color: rgb(255, 161, 119);
+    border: 4px solid rgb(255, 161, 119);
+}
+
+.color-3 {
+    background: rgb(45, 52, 0);
+    color: rgb(236, 255, 119);
+    border: 4px solid rgb(236, 255, 119);
+}
+
+.color-4 {
+    background: rgb(0, 52, 14);
+    color: rgb(119, 255, 155);
+    border: 4px solid rgb(119, 255, 155);
+}
+
+.color-5 {
+    background: rgb(0, 37, 52);
+    color: rgb(140, 119, 255);
+    border: 4px solid rgb(140, 119, 255);
+}
+
+.color-6 {
+    background: rgb(42, 0, 52);
+    color: rgb(235, 120, 255);
+    border: 4px solid rgb(235, 120, 255);
+}
+
+.color-7 {
+    background: rgb(217, 217, 217);
+    color: rgb(127, 127, 127);
+    border: 4px solid rgb(127, 127, 127);
+}
+
+.color-8 {
+    background: rgb(52, 25, 0);
+    color: rgb(255, 184, 119);
+    border: 4px solid rgb(255, 184, 119);
+}
+
+.color-9 {
+    background: rgb(52, 37, 0);
+    color: rgb(255, 216, 119);
+    border: 4px solid rgb(255, 216, 119);
+}
+
+.font-sm {
+    font-size: 25px;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: url("./bg.jpg");
+    background-size: 100%;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    filter: blur(7px);
+}
+
+.base-element:hover {
+    animation: element-hover 1s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes element-hover {
+    0% {
+        transform: scale(1.0) rotateX(0deg) skewX(0deg);
+    }
+
+    50% {
+        transform: scale(0.8) rotateX(270deg) skewX(90deg);
+    }
+
+    100% {
+        transform: scale(1.8) rotateX(720deg) skewX(180deg);
+    }
+}
