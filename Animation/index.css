@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(253, 253, 253);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    z-index: 1;
+}
+
+.right-circlr {
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.right-circlr::before {
+    content: "";
+    width: 240px;
+    height: 240px;
+    border: 5px solid rgb(0, 161, 214);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    /* animation: rightCirclrRotate 2s linear;
+    animation-fill-mode: forwards; */
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.left-circlr {
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.left-circlr::before {
+    content: "";
+    width: 240px;
+    height: 240px;
+    border: 5px solid rgb(0, 161, 214);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    /* animation: leftCirclrRotate 2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s; */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.ring {
+    width: 240px;
+    height: 240px;
+    /* background: #fff; */
+    border-radius: 100%;
+    border: 5px solid rgb(0, 161, 214);
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+
+    /* animation: ringRotate 0.2s linear;
+    animation-fill-mode: forwards; */
+}
+
+.oval-bar-box-little {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    opacity: 0;
+    /* background: lightskyblue; */
+    /* animation: ovalBarBoxRotate 1s;
+    animation-fill-mode: forwards; */
+    position: absolute;
+}
+
+.oval-bar-little {
+    width: 300px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 100;
+}
+
+.oval-bar-little::before {
+    content: "";
+    height: 20px;
+    width: 40px;
+    border-radius: 20px;
+    background: rgb(0, 161, 214);
+
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.oval-bar-little::after {
+    content: "";
+    height: 20px;
+    width: 40px;
+    border-radius: 20px;
+    background: rgb(0, 161, 214);
+
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+
+.oval-bar-box-larger {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.oval-bar-larger {
+    width: 350px;
+    height: 40px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 100;
+}
+
+.oval-bar-larger::before {
+    content: "";
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    background: rgb(0, 161, 214);
+
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+
+.oval-bar-larger::after {
+    content: "";
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    background: rgb(0, 161, 214);
+
+    position: absolute;
+    right: -40px;
+    top: 0;
+}
+
+.oval-bar-little:nth-child(1) {
+    transform: rotate(22.5deg);
+}
+
+.oval-bar-little:nth-child(2) {
+    transform: rotate(67.5deg);
+}
+
+.oval-bar-little:nth-child(3) {
+    transform: rotate(112.5deg);
+}
+
+.oval-bar-little:nth-child(4) {
+    transform: rotate(157.5deg);
+}
+
+
+.oval-bar-larger:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.oval-bar-larger:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.oval-bar-larger:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.oval-bar-larger:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.good {
+    height: 100px;
+    width: 80px;
+    background-color: rgb(112, 112, 112);
+    margin: 50px;
+    border-radius: 15px;
+
+    transform: skewX(-18deg);
+    position: relative;
+    left: 30px;
+    top: 20px;
+    z-index: 99;
+}
+
+.good::before {
+    content: "";
+    width: 60px;
+    height: 100px;
+    background: inherit;
+    transform: skew(18deg);
+
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+.good::after {
+    content: "";
+    width: 35px;
+    height: 100%;
+    background: inherit;
+    border-radius: 15px 0 0 15px;
+    transform: skew(18deg);
+
+    position: absolute;
+    left: -70px;
+}
+
+.up {
+    width: 30px;
+    height: 67px;
+    background: inherit;
+    position: absolute;
+    transform: skew(18deg);
+    border-radius: 15px;
+    top: -44px;
+    left: -10px;
+}
+
+.up::before {
+    content: "";
+    border: 20px solid transparent;
+    border-right: 20px solid rgb(112, 112, 112);
+    border-bottom: 20px solid rgb(112, 112, 112);
+    box-shadow: 1px 10px 0px rgb(112, 112, 112);
+    position: absolute;
+    left: -35px;
+    top: 4px;
+}
+
+.coin {
+    width: 195px;
+    height: 195px;
+    background: rgb(112, 112, 112);
+    border-radius: 100%;
+    position: relative;
+}
+
+.coin::before {
+    content: "";
+    width: 75px;
+    height: 10px;
+    background: rgb(253, 253, 253);
+    border-radius: 10px;
+    transform: translate(-50%, 50px);
+
+    position: absolute;
+    left: 50%;
+}
+
+.coin::after {
+    content: "";
+    width: 10px;
+    height: 110px;
+    border-radius: 10px;
+    background: rgb(253, 253, 253);
+    transform: translate(-50%, 50px);
+
+    position: absolute;
+    left: 50%;
+}
+
+.half-circle {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border: 10px solid rgb(253, 253, 253);
+    border-radius: 100%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: translate(-50%, 75px) rotate(45deg);
+
+    position: absolute;
+    left: 50%;
+}
+
+.circle-bar {
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    transform: translate(-50%, 80px);
+
+    position: absolute;
+    left: 50%;
+}
+
+.circle-bar::before {
+    content: "";
+    width: 10px;
+    height: 20px;
+    background: rgb(253, 253, 253);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+
+.circle-bar::after {
+    content: "";
+    width: 10px;
+    height: 20px;
+    background: rgb(253, 253, 253);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.start {
+    /* width: 200px;
+    height: 200px; */
+    position: relative;
+    top: 5px;
+}
+
+
+.angle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.angle::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgb(112, 112, 112) 41%);
+    border-radius: 10%;
+    transform: rotate(-45deg);
+    border-radius: 30px;
+
+    position: absolute;
+}
+
+.top {
+    transform: translate(-50%, -50%) rotate(0) scaleX(0.5);
+}
+
+.right {
+    transform: translate(-50%, -50%) rotate(72deg) scaleX(0.5);
+}
+
+.left {
+    transform: translate(-50%, -50%) rotate(-72deg) scaleX(0.5);
+}
+
+.right-bottom {
+    transform: translate(-50%, -50%) rotate(144deg) scaleX(0.5);
+}
+
+.left-bottom {
+    transform: translate(-50%, -50%) rotate(-144deg) scaleX(0.5);
+}
+
+
+/* CSS动画控制 */
+.item {
+    animation: itemScale 0.8s;
+    animation-delay: 4.1s;
+}
+
+.good {
+    animation: goodShake 0.2s 20;
+    animation-fill-mode: forwards;
+}
+
+.coin {
+    animation: coinColor 0.1;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+.start .angle::before {
+    animation: startColor 0.1;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+.up::before {
+    border-right: 20px solid rgb(0, 161, 214);
+    border-bottom: 20px solid rgb(0, 161, 214);
+    box-shadow: 1px 10px 0px rgb(0, 161, 214);
+}
+
+.circle .left-circlr::before {
+    animation: leftCirclrRotate 2s linear;
+    animation-fill-mode: backwards;
+    animation-delay: 2s;
+}
+
+.circle .right-circlr::before {
+    animation: rightCirclrRotate 4s linear;
+    animation-fill-mode: backwards;
+}
+
+.ring {
+    animation: ringRotate 0.2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+.oval-bar-box-little {
+    animation: ovalBarBoxRotate 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+.oval-bar-little::before,
+.oval-bar-little::after {
+    animation: littleOvalBarToClicle 1s;
+    animation-delay: 4.9s;
+}
+
+.oval-bar-box-larger {
+    animation: ovalBarBoxRotate 1.2s;
+    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+.oval-bar-larger::before,
+.oval-bar-larger::after {
+    animation: largerOvalBarToClicle 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.9s;
+}
+
+/* CSS动画控制 */
+
+@keyframes goodShake {
+    0% {
+        left: 30px;
+        top: 20px;
+        background: rgb(0, 161, 214);
+    }
+
+    20% {
+        left: 35px;
+        top: 24px;
+    }
+
+    40% {
+        left: 25px;
+        top: 20px;
+    }
+
+    60% {
+        left: 25px;
+        top: 15px;
+    }
+
+    80% {
+        left: 35px;
+        top: 25px;
+    }
+
+    100% {
+        left: 30px;
+        top: 20px;
+        background: rgb(0, 161, 214);
+    }
+}
+
+@keyframes coinColor {
+    0% {
+        background: rgb(0, 161, 214);
+    }
+
+    100% {
+        background: rgb(0, 161, 214);
+    }
+}
+
+@keyframes startColor {
+    0% {
+        background: linear-gradient(45deg, transparent 40%, rgb(0, 161, 214) 41%);
+    }
+
+    100% {
+        background: linear-gradient(45deg, transparent 40%, rgb(0, 161, 214) 41%);
+    }
+}
+
+@keyframes itemScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes leftCirclrRotate {
+    0% {
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rightCirclrRotate {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes ringRotate {
+    0% {
+        width: 240px;
+        height: 240px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 260px;
+        height: 260px;
+        opacity: 0;
+    }
+}
+
+@keyframes littleOvalBarToClicle {
+    0% {
+        height: 20px;
+        width: 40px;
+    }
+
+    100% {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@keyframes largerOvalBarToClicle {
+    0% {
+        height: 40px;
+        width: 80px;
+    }
+
+    100% {
+        height: 40px;
+        width: 45px;
+    }
+}
+
+@keyframes ovalBarBoxRotate {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
