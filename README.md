@@ -64,7 +64,7 @@
 
    ---
 
-6. **[CSS案例： 弹性小球加载效果]( <https://github.com/Fengzhen8023/css-demo/tree/elastic_ball)**
+6. **[CSS案例： 弹性小球加载效果](<https://github.com/Fengzhen8023/css-demo/tree/elastic_ball)**
 
    **效果预览：**（[效果加载不出来点这里](http://www.image.fengzhen8023.com/1.gif)）
 
