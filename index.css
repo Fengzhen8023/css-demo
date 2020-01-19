@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: #fff;
+}
+
+.wrap {
+    width: 100px;
+    background: lightblue;
+    position: absolute;
+    bottom: 100px;
+    margin-left: -50px;
+}
+
+.red {
+    left: 25%;
+}
+
+.green {
+    left: 50%;
+}
+
+.blue {
+    left: 75%;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    animation: ballMove 300ms infinite alternate;
+}
+
+.red .ball {
+    background: linear-gradient(#e55, #b00);
+}
+
+.green .ball {
+    background: linear-gradient(#5d5, #0a0);
+}
+
+.blue .ball {
+    background: linear-gradient(#59e, #04b);
+}
+
+.shadow {
+    width: 75px;
+    height: 25px;
+    background: #000;
+    border-radius: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -90px;
+
+    animation: shadowMove 300ms infinite alternate;
+}
+
+.red .ball, .red .shadow {
+    animation-delay: -200ms;
+}
+
+.green .ball, .green .shadow {
+    animation-delay: -100ms;
+}
+
+.blue .ball, .blue .shadow {
+    animation-delay: 0ms;
+}
+
+@keyframes ballMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes shadowMove {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 0.05;
+        transform: scale(1);
+    }
+}

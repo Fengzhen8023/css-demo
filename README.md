@@ -1,8 +1,8 @@
-### CSS 案例目录
+## CSS案例简介
 
-1.  **[CSS案例： 元素周期表](https://github.com/Fengzhen8023/css-demo/tree/periodic_table)**
-2.  **[CSS案例： 太极八卦图](https://github.com/Fengzhen8023/css-demo/tree/taiji)**
-3.  **[CSS案例： 手机充电动态图](https://github.com/Fengzhen8023/css-demo/tree/charge)**
-4.  **[CSS案例： CSS绘制40种基本图形](https://github.com/Fengzhen8023/css-demo/tree/basic_graph)**
-5.  **[CSS案例： 一键三连UI和动画效果]( https://github.com/Fengzhen8023/css-demo/tree/yi_jian_san_lian)**
+使用 **CSS + HTML** 实现弹性小球的效果，可以用作加载效果。
+
+##### 案例效果
+
+![](http://www.image.fengzhen8023.com/1.gif)
 
