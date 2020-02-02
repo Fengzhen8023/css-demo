@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: lightblue;
+}
+
+.box {
+    width: 800px;
+    height: 600px;
+    background: lightblue;
+    margin: 100px auto;
+    position: relative;
+}
+
+.left-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: rgb(116, 130, 192);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -50%);
+}
+
+.left-circle::before {
+    content: "";
+    width: 50px;
+    height: 20px;
+    background: rgb(86, 95, 128);
+    border-radius: 20px;
+
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.right-circle {
+    width: 200px;
+    height: 200px;
+    background: rgb(116, 130, 192);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(120%, -50%);
+}
+
+.right-circle::before {
+    content: "";
+    width: 50px;
+    height: 20px;
+    background: rgb(86, 95, 128);
+    border-radius: 20px;
+
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.middle-half-circle {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    border: 20px solid rgb(86, 95, 128);
+    box-sizing: border-box;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.middle-half-circle::before {
+    content: "";
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgb(86, 95, 128);
+
+    position: absolute;
+    left: -25px;
+    top: 0px;
+    transform: rotate(-52deg);
+}
+
+.middle-half-circle::after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgb(86, 95, 128);
+
+    position: absolute;
+    right: -25px;
+    top: 0px;
+    transform: rotate(52deg);
+}
+
+.left-light {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.left-light::before {
+    content: "";
+    width: 50px;
+    height: 300px;
+    background: #fff;
+    transform: rotate(30deg);
+    margin-top: -150px;
+    animation: lightMove 1.0s;
+
+    position: absolute;
+    top: 50%;
+    left: -75px;
+}
+
+.right-light {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.right-light::before {
+    content: "";
+    width: 50px;
+    height: 300px;
+    background: #fff;
+    transform: rotate(30deg);
+    animation: lightMove 1.0s;
+    animation-delay: 0.6s;
+    
+    position: absolute;
+    margin-top: -150px;
+    top: 50%;
+    left: -75px;
+}
+
+.light-text {
+    width: 100px;
+    height: 100px;
+    /* background: red; */
+    overflow: hidden;
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+    font-weight: bolder;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -55px;
+    margin-top: -50px;
+}
+
+.text {
+    position: absolute;
+}
+
+.text-1 {
+    transform: translate(15px, 90px);
+    animation: textMove1 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.0s;
+}
+
+.text-2 {
+    transform: translate(15px, -100px);
+    animation: textMove2 0.8s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.text-3 {
+    transform: translate(-120px, 0px);
+    animation: textMove3 0.8s;
+    animation-delay: 2.6s;
+    animation-fill-mode: forwards;
+}
+
+.text-4 {
+    transform: scale(1) translate(15px, 90px) rotate(720deg);
+    animation: textMove4 0.8s;
+    animation-delay: 3.4s;
+    animation-fill-mode: forwards;
+}
+
+.text-5 {
+    transform: translate(-120px, 0px);
+    animation: textMove5 1s;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textMove5 {
+    0% {
+        transform: translate(-120px, 0px);
+    }
+
+    50% {
+        transform: translate(15px, 0px);
+    }
+
+    55% {
+        transform: translate(15px, 0px) rotate(4deg);
+    }
+
+    60% {
+        transform: translate(15px, 0px) rotate(-4deg);
+    }
+
+    65% {
+        transform: translate(15px, 0px) rotate(4deg);
+    }
+
+    70% {
+        transform: translate(15px, 0px) rotate(-4deg);
+    }
+
+    75% {
+        transform: translate(15px, 0px) rotate(4deg);
+    }
+
+    80% {
+        transform: translate(15px, 0px) rotate(-4deg);
+    }
+
+    85% {
+        transform: translate(15px, 0px) rotate(4deg);
+    }
+
+    90% {
+        transform: translate(15px, 0px) rotate(-4deg);
+    }
+
+    95% {
+        transform: translate(15px, 0px) rotate(4deg);
+    }
+
+    100% {
+        transform: translate(15px, 0px) rotate(-4deg);
+    }
+}
+
+@keyframes textMove4 {
+    0% {
+        transform: scale(0) translate(-120px, 0px) rotate(0);
+    }
+
+    60% {
+        transform: scale(1) translate(15px, 0px) rotate(720deg);
+    }
+
+    60% {
+        transform: scale(1) translate(15px, 0px) rotate(720deg);
+    }
+
+    100% {
+        transform: scale(1) translate(15px, 90px) rotate(720deg);
+    }
+}
+
+@keyframes textMove3 {
+    0% {
+        transform: translate(-120px, 0px);
+    }
+
+    60% {
+        transform: translate(15px, 0px);
+    }
+
+    80% {
+        transform: translate(15px, 0px);
+    }
+
+    100% {
+        transform: translate(120px, 0px);
+    }
+}
+
+@keyframes textMove2 {
+    0% {
+        transform: translate(15px, -100px);
+    }
+
+    60% {
+        transform: translate(15px, 0px);
+    }
+
+    80% {
+        transform: translate(15px, 0px);
+    }
+
+    100% {
+        transform: translate(-120px, 0px);
+    }
+}
+
+@keyframes textMove1 {
+    0% {
+        transform: translate(15px, 90px);
+    }
+
+    60% {
+        transform: translate(15px, 0px);
+    }
+
+    100% {
+        transform: translate(100px, 0px);
+    }
+}
+
+@keyframes lightMove {
+    0% {
+        left: -75px
+    }
+
+    100% {
+        left: 230px;
+    }
+}
