@@ -81,5 +81,14 @@
    ![](http://www.image.fengzhen8023.com/001.gif)
 
    **视频地址：** [「CSS 案例」太极八卦图](https://www.bilibili.com/video/av86280370/ )
+   ---
+
+8. **[CSS制作MG动画：B站LOGO](https://github.com/Fengzhen8023/css-demo/tree/B-logo)**
+
+   **效果预览：**（[效果加载不出来点这里](http://www.image.fengzhen8023.com/封面.jpg)）
+
+   ![](http://www.image.fengzhen8023.com/封面.jpg)
+
+   **视频地址：** [「CSS 案例」B站LOGO](https://www.bilibili.com/video/av91164042/ )
 
 
