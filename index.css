@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 800px;
+    height: 600px;
+    /* background: lightblue; */
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-face {
+    width: 200px;
+    height: 150px;
+    background: rgb(1, 177, 253);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-face::before {
+    content: "";
+    width: 20px;
+    height: 30px;
+    background: rgb(1, 177, 253);
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+}
+
+.logo-face::after {
+    content: "";
+    width: 20px;
+    height: 30px;
+    background: rgb(1, 177, 253);
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+}
+
+.logo-face-inner {
+    width: 160px;
+    height: 110px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.left-line {
+    width: 50px;
+    height: 12px;
+    border-radius: 12px;
+    background: rgb(1, 177, 253);
+    transform: rotate(45deg);
+
+    position: absolute;
+    top: -15px;
+    left: 40px;
+}
+
+.right-line {
+    width: 50px;
+    height: 12px;
+    border-radius: 12px;
+    background: rgb(1, 177, 253);
+    transform: rotate(-45deg);
+
+    position: absolute;
+    top: -15px;
+    right: 40px;
+}
+
+.left-eye {
+    width: 40px;
+    height: 16px;
+    background: rgb(1, 177, 253);
+    transform: rotate(-15deg);
+
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.right-eye {
+    width: 40px;
+    height: 16px;
+    background: rgb(1, 177, 253);
+    transform: rotate(15deg);
+
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
+
+.left-nose {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 4px 10px 0px rgb(1, 177, 253);
+
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 55px;
+}
+
+.right-nose {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: -4px 10px 0px rgb(1, 177, 253);
+
+    position: absolute;
+    right: 50%;
+    margin-right: -30px;
+    bottom: 55px;
+}
