@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.common {
+    width: 360px;
+    height: 360px;
+    background: orange;
+    text-align: center;
+    position: relative;
+}
+
+#breakfast {
+    background: #008b8b;
+}
+
+#breakfast div {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-top: -110px;
+    margin-left: -105px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1),
+        0 0 0 20px white,
+        0 6px 0 20px #eee,
+        0 12px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#breakfast div::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 70px;
+    top: 0;
+    background: #d6ab75;
+    border-radius: 50%;
+    box-shadow: 0 6px 0 #f1cb9a,
+        0 8px 2px rgba(0, 0, 0, 0.2),
+
+        -128px 42px 2px -54px rgba(0, 0, 0, 0.2),
+        -132px 40px 0 -61px #f6c83e,
+        -128px 40px 0 -54px #edb815,
+        -115px 30px 0 -30px white,
+        -115px 33px 2px -30px rgba(0, 0, 0, 0.1),
+
+        -62px 90px 0 -61px #f6c83e,
+        -65px 90px 0 -54px #edb815,
+        -65px 92px 2px -54px rgba(0, 0, 0, 0.2),
+        -80px 90px 0 -32px white,
+        -80px 93px 2px -32px rgba(0, 0, 0, 0.1),
+
+        -8px 110px 0 -45px #8c7842,
+        -8px 113px 2px -45px rgba(0, 0, 0, 0.2),
+
+        25px 103px 0 -45px #806c35,
+        25px 106px 2px -45px rgba(0, 0, 0, 0.2),
+
+        -93px -40px 0 -45px #e4a5b6,
+        -93px -39px 0 -42px #c97d91,
+        -93px -37px 2px -42px rgba(0, 0, 0, 0.2);
+}
+
+#breakfast div::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fbf6bc;
+    left: 120px;
+    top: 50px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 02px #dfd888, 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: rotate(30deg);
+}
+
+#sushi {
+    background: #87ceeb;
+}
+
+#sushi div {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    margin-top: -37px;
+    background: white;
+    border-top-left-radius: 80px 50px;
+    border-top-right-radius: 80px 50px;
+    border-bottom-left-radius: 40px 50px;
+    border-bottom-right-radius: 40px 50px;
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.08) 0%,
+        rgba(0, 0, 0, 0.08) 32%,
+        transparent 32%),
+        linear-gradient(85deg,
+        transparent 39%,
+        rgba(0, 0, 0, 0.05) 39%,
+        rgba(0, 0, 0, 0.05) 45%,
+        transparent 45%);
+    box-shadow: 0 25px 0 -20px rgba(0, 0, 0, 0.1);
+}
+
+#sushi div::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 260px;
+    height: 25px;
+    background: #f19861;
+    margin-left: -130px;
+    left: 50%;
+    border-top-left-radius: 90px 30px;
+    border-top-right-radius: 80px 20px;
+    background-image: linear-gradient(to bottom,
+        transparent 70%,
+        rgba(0, 0, 0, 0.05) 70%),
+        linear-gradient(to right,
+        transparent 41%,
+        rgba(0, 0, 0, 0.1) 41%,
+        rgba(0, 0, 0, 0.1) 50%,
+        transparent 50%),
+        repeating-linear-gradient(45deg, #f19861, #f19861 20px, #ffcdaf 20px, #ffcdaf 25px);
+}
+
+#sushi div::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 103px;
+    background: #465b45;
+    left: 50%;
+    margin-left: -20px;
+    top: -2px;
+    background-image: linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.1) 60%);
+}
+
+#cupcake {
+    background: #ffc0cb;
+}
+
+#cupcake div {
+    width: 240px;
+    height: 150px;
+    background: #61381c;
+    position: absolute;
+    margin-left: -120px;
+    margin-top: -30px;
+    left: 50%;
+    top: 50%;
+    background-image: radial-gradient(circle at top center, rgba(73, 41, 20, 0) 55%, rgba(73, 41, 20, 0.9) 75%),
+        repeating-linear-gradient(to right, transparent, transparent 7px, rgba(0, 0, 0, 0.7) 9px, rgba(0, 0, 0, 0.7) 20px, transparent 22px),
+        linear-gradient(to bottom, transparent 15px, rgba(255, 255, 255, 0.5) 16px, rgba(255, 255, 255, 0.3) 40px, transparent 42px);
+    border-bottom-right-radius: 120px 30px;
+    border-bottom-left-radius: 120px 30px;
+    box-shadow: 0 10px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+#cupcake div::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #dc143c;
+    border-radius: 50%;
+    top: -95px;
+    left: 50%;
+    margin-left: -30px;
+    box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cupcake div::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 240px;
+    height: 80px;
+    background: #ffe4e1;
+    left: 50%;
+    top: -70px;
+    margin-left: -120px;
+    box-shadow: 0 20px 0 6px #3d241c, inset 0 -15px 25px rgba(145, 102, 146, 0.5);
+    border-radius: 60% 60% 50px 50px;
+}
+
+#corn-dog {
+    background: #ffe4c4;
+}
+
+#corn-dog div {
+    width: 16px;
+    height: 150px;
+    background: #deb887;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -8px;
+    margin-top: 0;
+    background-image: linear-gradient(to right, #deb887, #d3a05f);
+    border-radius: 20px;
+}
+
+#corn-dog div::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 80px;
+    height: 220px;
+    background: #cd853f;
+    left: 50%;
+    top: -150px;
+    margin-left: -40px;
+    box-shadow: inset -5px -5px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 50px/70px 70px 100px 100px;
+    z-index: 2;
+}
+
+#corn-dog div::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 18px;
+    height: 23px;
+    background: #cd853f;
+    left: 50%;
+    top: 62px;
+    margin-left: -9px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+}
