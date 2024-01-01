@@ -1,171 +1,252 @@
-.gearbox {
-  background: #111;
-  height: 150px;
-  width: 200px;
+.loader {
   position: relative;
-  border: none;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  width: 75px;
+  height: 100px;
 }
 
-.gearbox .overlay {
-  border-radius: 6px;
-  content: "";
+.loader__bar {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  box-shadow: inset 0px 0px 20px black;
-  transition: background 0.2s;
-  background: transparent;
+  bottom: 0;
+  width: 10px;
+  height: 50%;
+  background: rgb(0, 0, 0);
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.gear {
-  position: absolute;
-  height: 60px;
-  width: 60px;
-  box-shadow: 0px -1px 0px 0px #888888, 0px 1px 0px 0px black;
-  border-radius: 30px;
+.loader__bar:nth-child(1) {
+  left: 0px;
+  transform: scale(1, 0.2);
 }
 
-.gear:after {
-  content: "";
-  position: absolute;
-  height: 36px;
-  width: 36px;
-  border-radius: 36px;
-  background: #111;
-  top: 50%;
-  left: 50%;
-  margin-left: -18px;
-  margin-top: -18px;
-  z-index: 3;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 2px 0px 0px #090909, inset 0px -1px 0px 0px #888888;
+.loader__bar:nth-child(2) {
+  left: 15px;
+  transform: scale(1, 0.4);
 }
 
-.gear.one {
-  top: 12px;
-  left: 10px;
+.loader__bar:nth-child(3) {
+  left: 30px;
+  transform: scale(1, 0.6);
 }
 
-.gear-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: #555;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.loader__bar:nth-child(4) {
+  left: 45px;
+  transform: scale(1, 0.8);
 }
 
-.gear-inner .bar {
-  background: #555;
-  height: 16px;
-  width: 76px;
-  position: absolute;
-  left: 50%;
-  margin-left: -38px;
-  top: 50%;
-  margin-top: -8px;
-  border-radius: 2px;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.gear-inner .bar:nth-child(2) {
-  transform: rotate(60deg);
-}
-
-.gear-inner .bar:nth-child(3) {
-  transform: rotate(120deg);
-}
-
-.gear-inner .bar:nth-child(4) {
-  transform: rotate(90deg);
-}
-
-.gear-inner .bar:nth-child(5) {
-  transform: rotate(30deg);
-}
-
-.gear-inner .bar:nth-child(6) {
-  transform: rotate(150deg);
-}
-
-.gear.large {
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-}
-
-.gear.large:after {
-  height: 96px;
-  width: 96px;
-  border-radius: 48px;
-  margin-left: -48px;
-  margin-top: -48px;
-}
-
-.gear.two {
-  top: 61px;
+.loader__bar:nth-child(5) {
   left: 60px;
+  transform: scale(1, 1);
 }
 
-.gear.three {
-  top: 110px;
-  left: 10px;
+.loader__ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: rgb(44, 143, 255);
+  border-radius: 50%;
 }
 
-.gear.four {
-  top: 13px;
-  left: 128px;
-}
-
-.large .gear-inner {
-  border-radius: 60px;
-}
-
-.large .gear-inner .bar {
-  margin-left: -68px;
-  width: 136px;
-}
-
-
-
-@keyframes clockwise {
+@keyframes barUp1 {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1, 0.2);
+  }
+
+  40% {
+    transform: scale(1, 0.2);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  90% {
+    transform: scale(1, 1);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: scale(1, 0.2);
   }
 }
 
-@keyframes counter-clockwise {
+.loader__bar:nth-child(1) {
+  animation: barUp1 4s infinite;
+}
+
+@keyframes barUp2 {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1, 0.4);
+  }
+
+  40% {
+    transform: scale(1, 0.4);
+  }
+
+  50% {
+    transform: scale(1, 0.8);
+  }
+
+  90% {
+    transform: scale(1, 0.8);
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: scale(1, 0.4);
   }
 }
 
-.gear.one .gear-inner {
-  animation: counter-clockwise 3s infinite linear;
+.loader__bar:nth-child(2) {
+  animation: barUp2 4s infinite;
 }
 
-.gear.two .gear-inner {
-  animation: clockwise 3s infinite linear;
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, 0.6);
+  }
+
+  100% {
+    transform: scale(1, 0.6);
+  }
 }
 
-.gear.three .gear-inner {
-  animation: counter-clockwise 3s infinite linear;
+.loader__bar:nth-child(3) {
+  animation: barUp3 4s infinite;
 }
 
-.gear.four .gear-inner {
-  animation: counter-clockwise 6s infinite linear;
+
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, 0.8);
+  }
+
+  40% {
+    transform: scale(1, 0.8);
+  }
+
+  50% {
+    transform: scale(1, 0.4);
+  }
+
+  90% {
+    transform: scale(1, 0.4);
+  }
+
+  100% {
+    transform: scale(1, 0.8);
+  }
+}
+
+.loader__bar:nth-child(4) {
+  animation: barUp4 4s infinite;
+}
+
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  40% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1, 0.2);
+  }
+
+  90% {
+    transform: scale(1, 0.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.loader__bar:nth-child(5) {
+  animation: barUp5 4s infinite;
+}
+
+
+@keyframes ball624 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  5% {
+    transform: translate(8px, -14px);
+  }
+
+  10% {
+    transform: translate(15px, -10px);
+  }
+
+  17% {
+    transform: translate(23px, -24px);
+  }
+
+  20% {
+    transform: translate(30px, -20px);
+  }
+
+  27% {
+    transform: translate(38px, -34px);
+  }
+
+  30% {
+    transform: translate(45px, -30px);
+  }
+
+  37% {
+    transform: translate(53px, -44px);
+  }
+
+  40% {
+    transform: translate(60px, -40px);
+  }
+
+  50% {
+    transform: translate(60px, 0);
+  }
+
+  57% {
+    transform: translate(53px, -14px);
+  }
+
+  60% {
+    transform: translate(45px, -10px);
+  }
+
+  67% {
+    transform: translate(37px, -24px);
+  }
+
+  70% {
+    transform: translate(30px, -20px);
+  }
+
+  77% {
+    transform: translate(22px, -34px);
+  }
+
+  80% {
+    transform: translate(15px, -30px);
+  }
+
+  87% {
+    transform: translate(7px, -44px);
+  }
+
+  90% {
+    transform: translate(0, -40px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.loader__ball {
+  animation: ball624 4s infinite;
 }
